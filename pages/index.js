@@ -45,9 +45,9 @@ const Page = () => {
             transition={{ duration: 0.4, type: 'easeInOut' }}
         >
             <Container maxW="container.xl">
-                <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}  mb={6} align='center' py={5}>
+                {/* <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}  mb={6} align='center' py={5}>
                     Hello, I&apos;m a full-stack developer based in India
-                </Box>
+                </Box> */}
 
                 <Box
                     display='flex'
@@ -98,7 +98,7 @@ const Page = () => {
                             borderColor="whiteAlpha.800"
                             borderWidth={2}
                             borderStyle="solid"
-                            maxWidth="300px"
+                            maxWidth={['200px','250px','300px']}
                             display="inline-block"
                             borderRadius="full"
                             src="/images/me.jpeg"

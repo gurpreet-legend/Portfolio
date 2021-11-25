@@ -22,7 +22,7 @@ const works = () => {
             variants={variants}
             transition={{ duration: 0.4, type: 'easeInOut' }}
         >
-        <Heading as="h2" variant="section-title" mt={8} mb={8}>
+        <Heading as="h1" variant="section-title" mb={30} fontSize="6xl">
             My Projects
         </Heading>
         <Box>
