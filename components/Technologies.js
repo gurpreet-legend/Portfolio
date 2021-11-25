@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from '../components/section'
+import Section from './primitives/section'
 import {Heading, Box, Flex, Spacer} from '@chakra-ui/react'
 import icons from '../lib/icons'
 

@@ -4,7 +4,7 @@ import { theme } from '@chakra-ui/theme';
 import { DownloadIcon } from '@chakra-ui/icons';
 import {SiStripe} from 'react-icons/si'
 import TextLoop from "react-text-loop";
-import Section from '../components/section'
+import Section from '../components/primitives/section'
 import Technologies from '../components/Technologies';
 import React from 'react'
 
