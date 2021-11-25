@@ -1,8 +1,6 @@
 import { Box, Container, Heading, Image, useColorModeValue, Button } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { theme } from '@chakra-ui/theme'; 
 import { DownloadIcon } from '@chakra-ui/icons';
-import {SiStripe} from 'react-icons/si'
 import TextLoop from "react-text-loop";
 import Section from '../components/primitives/section'
 import Technologies from '../components/Technologies';
