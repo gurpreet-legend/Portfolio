@@ -21,7 +21,7 @@ const Technologies = () => {
                 {icons.map((icon, index) => ( icon.icon && (
                     <Box key={index}>
                     <Box m="5" data-tip data-for={icon.name}>
-                        {React.createElement(icon.icon, icon.config)}
+                        {React.createElement(icon.icon, {size:icon.config.size, color:colorMode=='light' && icon.config.color=='#ffffff' ? '#000000' : icon.config.color})}
                     </Box>
                     <Box>
                     <ReactTooltip 

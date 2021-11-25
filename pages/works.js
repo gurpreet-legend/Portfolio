@@ -5,6 +5,7 @@ import Section from "../components/primitives/section";
 import Tilt from 'react-parallax-tilt';
 import Projects from "../lib/myProjectInfo";
 import { motion } from "framer-motion";
+import { useColorMode } from '@chakra-ui/color-mode'
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },
@@ -13,7 +14,7 @@ const variants = {
 }
 
 const works = () => {
-
+    const { colorMode } = useColorMode()
     return (
         <motion.div
             initial="hidden"
@@ -57,7 +58,7 @@ const works = () => {
                                 {
                                     project.techStack.map((icon, i)=>(
                                         <Box key={i} mx={2}>
-                                            {React.createElement(icon.icon, {color: icon.config.color, size: "3em"})}
+                                            {React.createElement(icon.icon, {size: "3em", color:colorMode=='light' && icon.config.color=='#ffffff' ? '#000000' : icon.config.color})}
                                         </Box>
                                     ))
                                 }
