@@ -4,11 +4,24 @@ import { Box, Heading, Text, Button, Flex, Link, Spacer} from "@chakra-ui/react"
 import Section from "../components/primitives/section";
 import Tilt from 'react-parallax-tilt';
 import Projects from "../lib/myProjectInfo";
+import { motion } from "framer-motion";
+
+const variants = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: -0, y: 20 }
+}
 
 const works = () => {
 
     return (
-        <>
+        <motion.div
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.4, type: 'easeInOut' }}
+        >
         <Heading as="h2" variant="section-title" mt={8} mb={8}>
             My Projects
         </Heading>
@@ -65,7 +78,7 @@ const works = () => {
                 </Section>
             ))}
         </Box>
-        </>
+        </motion.div>
 
     )
 }
