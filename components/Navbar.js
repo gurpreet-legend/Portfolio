@@ -78,7 +78,7 @@ const Navbar = props => {
                     </LinkItem>
                     <LinkItem
                         _target="_blank"
-                        href=""
+                        href="https://github.com/gurpreet-legend"
                         path={path}
                         display="inline-flex"
                         alignItems="center"
