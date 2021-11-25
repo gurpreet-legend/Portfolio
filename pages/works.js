@@ -40,6 +40,7 @@ const works = () => {
                             <Box borderRadius="20px" overflow="hidden" w={{lg:'45vw', sm:'100vw'}}>
                                 <Image 
                                     src={project.imagePath}
+                                    alt="project image"
                                 />
                             </Box>
                         </Tilt>
@@ -63,12 +64,12 @@ const works = () => {
                             </Flex>
                             <Flex>
                                 <Button mr={4}>
-                                    <a href={project.hostlink} target="_blank">
+                                    <a href={project.hostlink} target="_blank" rel="noreferrer">
                                         Hostlink
                                     </a>
                                 </Button>
                                 <Button>
-                                    <a href={project.githubUrl} target="_blank">
+                                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
                                         Code
                                     </a>
                                 </Button>                       

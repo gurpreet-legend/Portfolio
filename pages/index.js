@@ -2,7 +2,6 @@ import { Box, Container, Heading, Image, useColorModeValue, Button } from '@chak
 import { motion } from 'framer-motion'
 import { DownloadIcon } from '@chakra-ui/icons';
 import TextLoop from "react-text-loop";
-import Section from '../components/primitives/section'
 import Technologies from '../components/Technologies';
 import React from 'react'
 import GetToKnowMe from '../components/GetToKnowMe';
@@ -66,8 +65,8 @@ const Page = () => {
                             <Heading as="h2" size="lg" display="inline"> and{' '}</Heading>
                             
                             <TextLoop>
-                                {Texts.map((text) => (
-                                    <Heading as="h2" size="lg" color={text.color}>
+                                {Texts.map((text, index) => (
+                                    <Heading as="h2" size="lg" color={text.color} key={index}>
                                     {text.field}
                                     </Heading>)
                                 )}
@@ -75,7 +74,7 @@ const Page = () => {
                             
                             {/* CV download button  */}
                             <Button display='block' mt={7} colorScheme="teal">
-                            <a href="/resume.pdf" target="_blank" download> My Resume <DownloadIcon/></a>
+                            <a href="/resume.pdf" target="_blank" rel="noreferrer" download> My Resume <DownloadIcon/></a>
                             </Button>
                         </Box>
                             

@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/layout'
+import {Heading, Text } from '@chakra-ui/layout'
 import React from 'react'
 import Section from './primitives/section'
 
