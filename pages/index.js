@@ -7,6 +7,7 @@ import TextLoop from "react-text-loop";
 import Section from '../components/primitives/section'
 import Technologies from '../components/Technologies';
 import React from 'react'
+import GetToKnowMe from '../components/GetToKnowMe';
 
 const Texts = [
     {
@@ -102,13 +103,7 @@ const Page = () => {
             <Technologies />
 
             {/* Get to know me section */}
-            <Section delay={0.1}>
-                <Heading as="h3" variant="section-title">
-                    Get to know me
-                </Heading>
-                <p>Paragraph</p>
-
-            </Section>
+            <GetToKnowMe/>
 
 
 
