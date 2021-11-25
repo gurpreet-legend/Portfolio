@@ -50,14 +50,14 @@ const works = () => {
                             </Flex>
                             <Flex>
                                 <Button mr={4}>
-                                    <Link href="">
+                                    <a href={project.hostlink} target="_blank">
                                         Hostlink
-                                    </Link>
+                                    </a>
                                 </Button>
                                 <Button>
-                                    <Link href="">
+                                    <a href={project.githubUrl} target="_blank">
                                         Code
-                                    </Link>
+                                    </a>
                                 </Button>                       
                             </Flex>
                         </Flex>
