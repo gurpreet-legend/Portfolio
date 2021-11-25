@@ -32,7 +32,6 @@ const Texts = [
 ]
 
 const Page = () => {
-    console.log(theme.breakpoints);
     return (
         // Profile Section 
         <Container maxW="container.xl">
