@@ -1,4 +1,5 @@
 import { Box, Container, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import { theme } from '@chakra-ui/theme'; 
 import TextLoop from "react-text-loop";
 import React from 'react'
@@ -71,6 +72,7 @@ const Page = () => {
                     textAlign="center"
                     display="flex"
                     justifyContent="flex-end"
+                    whileHover={{boxShadow: '0px 0px 5px #fff'}}
                 >
                     <Image
                         borderColor="whiteAlpha.800"
@@ -81,6 +83,7 @@ const Page = () => {
                         borderRadius="full"
                         src="/images/me.jpeg"
                         alt="Profile image"
+                        _hover={useColorModeValue({boxShadow: '0 0 10px #000'},{boxShadow: '0 0 10px #fff'})}
                     />
                 </Box>
             </Box>
