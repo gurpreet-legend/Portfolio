@@ -33,7 +33,7 @@ const Logo = () => {
                 fontWeight="bold"
                 ml={3}
                 >
-              GurpreetSingh
+              Gurpreet Singh
               </Text>
             </LogoBox>
           </a>
