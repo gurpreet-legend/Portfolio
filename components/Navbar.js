@@ -1,4 +1,4 @@
-import Logo from './Logo.js'
+import Logo from './logo.js'
 import NextLink from 'next/link'
 import {
     Container, 
