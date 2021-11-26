@@ -1,4 +1,4 @@
-# My Pawrtfolio 🐾
+# My Paws-folio 🐾
 
 [gurpreets.vercel.app](https://gurpreets.vercel.app/)
 
