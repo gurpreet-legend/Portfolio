@@ -2,7 +2,9 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../../lib/model'
-import { DogSpinner, DogContainer } from './VoxelDogLoader'
+// import { DogSpinner, DogContainer } from './VoxelDogLoader'
+import DogContainer from './DogContainer'
+import DogSpinner from './DogSpinner'
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
