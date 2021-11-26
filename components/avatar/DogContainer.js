@@ -1,7 +1,7 @@
-import { forwardRef } from 'react'
+// import { forwardRef } from 'react'
 import { Box } from '@chakra-ui/react'
 
-const DogContainer = forwardRef(({ children }, ref) => (
+const DogContainer = ({children}) => (
     <Box
       ref={ref}
       className="voxel-dog"
@@ -14,7 +14,7 @@ const DogContainer = forwardRef(({ children }, ref) => (
     >
       {children}
     </Box>
-))
-// DogContainer.displayName="DogContainer"
+)
+DogContainer.displayName="DogContainer"
 
 export default DogContainer
