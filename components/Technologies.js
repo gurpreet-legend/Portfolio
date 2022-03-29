@@ -22,7 +22,7 @@ const Technologies = () => {
                 {icons.map((icon, index) => (<Box p={0}>{icon.icon}</Box> && (
                     <>
                     <Box key={index}>
-                        <Box w={["80%","80%","50%","50%"]}  m={5} data-tip data-for={icon.name}>
+                        <Box m={5} data-tip data-for={icon.name}>
                             {React.createElement(icon.icon, { size: icon.config.size, color: colorMode == 'light' && icon.config.color == '#ffffff' ? '#000000' : icon.config.color })}
                         </Box>
                         <Box>
@@ -38,7 +38,7 @@ const Technologies = () => {
                                 arrowColor={colorMode == "dark" ? '#ffffff' : '#000000'}
                                 clickable={true}
                             >
-                                <Box textAlign="center" width="10vw">
+                                <Box textAlign="center" width="300px">
                                     <Heading size="md">{icon.name}</Heading>
                                     <Text fontSize="md">{icon.description}</Text>
                                     <Box fontSize="lg"><a href={icon.url} target="_blank" rel="noreferrer">Learn more</a></Box>
