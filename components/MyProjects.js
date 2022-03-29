@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@chakra-ui/image";
-import { Box, Heading, Text, Button, Flex, Spacer } from "@chakra-ui/react"
+import { Box, Heading, Text, Button, Flex } from "@chakra-ui/react"
 import Section from "./primitives/section";
 import Tilt from 'react-parallax-tilt';
 import Projects from "../lib/myProjectInfo";

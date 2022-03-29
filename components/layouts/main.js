@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../Navbar'
-import { Box, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import VoxelDog from '../avatar/VoxelDog'
 
 const Main = ({children, router}) => {
