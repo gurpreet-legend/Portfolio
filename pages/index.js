@@ -12,7 +12,15 @@ const Texts = [
         color: '#1abc9c'
     },
     {
-        field: 'Designer',
+        field: 'Blockchain Developer' ,
+        color: '#3498db'
+    },  
+    {
+        field: 'ML Developer' ,
+        color: '#f1c40f'
+    },  
+    {
+        field: 'Graphics Designer',
         color: '#e74c3c'
     },
     {
