@@ -49,7 +49,7 @@ const Page = () => {
             variants={variants}
             transition={{ duration: 0.4, type: 'easeInOut' }}
         >
-            <Container maxW="container.xl">
+            <Container maxW="container.xl" pb={4} px={[0,0]}>
                 {/* <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}  mb={6} align='center' py={5}>
                     Hello, I&apos;m a full-stack developer based in India
                 </Box> */}

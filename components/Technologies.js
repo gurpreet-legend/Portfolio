@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from './primitives/section'
-import {Heading, Box, Flex, Text} from '@chakra-ui/react'
+import { Heading, Box, Flex, Text, Spacer } from '@chakra-ui/react'
 import icons from '../lib/icons'
 import ReactTooltip from "react-tooltip";
 import { useTheme } from "@chakra-ui/react"
@@ -17,37 +17,41 @@ const Technologies = () => {
             </Heading>
             <Flex
                 flexWrap="wrap"
+                justifyContent="center"
             >
-                {icons.map((icon, index) => ( icon.icon && (
+                {icons.map((icon, index) => (<Box p={0}>{icon.icon}</Box> && (
+                    <>
                     <Box key={index}>
-                    <Box m="5" data-tip data-for={icon.name}>
-                        {React.createElement(icon.icon, {size:icon.config.size, color:colorMode=='light' && icon.config.color=='#ffffff' ? '#000000' : icon.config.color})}
-                    </Box>
-                    <Box>
-                    <ReactTooltip 
-                        id={icon.name}
-                        place='bottom'
-                        type='info'
-                        effect='solid'
-                        backgroundColor={colorMode == "dark" ? colors.orange[200]: colors.teal[500]}
-                        textColor="#000000"
-                        border={true}
-                        borderColor={colorMode == "dark" ? '#ffffff':'#000000'}
-                        arrowColor= {colorMode == "dark" ? '#ffffff':'#000000'}
-                        clickable={true}
-                    >
-                        <Box textAlign="center" width="10vw">
-                            <Heading size="md">{icon.name}</Heading>
-                            <Text fontSize="md">{icon.description}</Text>
-                            <Box fontSize="lg"><a href={icon.url} target="_blank" rel="noreferrer">Learn more</a></Box>
-                            
+                        <Box w={["80%","80%","50%","50%"]}  m={5} data-tip data-for={icon.name}>
+                            {React.createElement(icon.icon, { size: icon.config.size, color: colorMode == 'light' && icon.config.color == '#ffffff' ? '#000000' : icon.config.color })}
                         </Box>
+                        <Box>
+                            <ReactTooltip
+                                id={icon.name}
+                                place='bottom'
+                                type='info'
+                                effect='solid'
+                                backgroundColor={colorMode == "dark" ? colors.orange[200] : colors.teal[500]}
+                                textColor="#000000"
+                                border={true}
+                                borderColor={colorMode == "dark" ? '#ffffff' : '#000000'}
+                                arrowColor={colorMode == "dark" ? '#ffffff' : '#000000'}
+                                clickable={true}
+                            >
+                                <Box textAlign="center" width="10vw">
+                                    <Heading size="md">{icon.name}</Heading>
+                                    <Text fontSize="md">{icon.description}</Text>
+                                    <Box fontSize="lg"><a href={icon.url} target="_blank" rel="noreferrer">Learn more</a></Box>
 
-                    </ReactTooltip>
+                                </Box>
 
+                            </ReactTooltip>
+
+                        </Box>
                     </Box>
-                    </Box>
-                    )     
+                    {/* <Spacer /> */}
+                    </>
+                )
                 ))}
             </Flex>
         </Section>
