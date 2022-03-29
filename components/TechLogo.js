@@ -1,9 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 
 const TechLogo = ({src, width}) => {
   return (
     <div>
-        <img src={src} style={{width: width, height: "auto"}}/>
+        <Image src={src} width={width} height={width} alt="techlogo"/>
     </div>
   )
 }

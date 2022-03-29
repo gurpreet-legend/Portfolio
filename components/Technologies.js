@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from './primitives/section'
-import { Heading, Box, Flex, Text, Spacer } from '@chakra-ui/react'
+import { Heading, Box, Flex, Text } from '@chakra-ui/react'
 import icons from '../lib/icons'
 import ReactTooltip from "react-tooltip";
 import { useTheme } from "@chakra-ui/react"
@@ -49,7 +49,6 @@ const Technologies = () => {
 
                         </Box>
                     </Box>
-                    {/* <Spacer /> */}
                     </>
                 )
                 ))}
