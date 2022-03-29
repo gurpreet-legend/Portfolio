@@ -13,10 +13,10 @@ const Main = ({children, router}) => {
 
             <Navbar path={router.asPath}/>
 
-            <Container maxW="container.xl" pt={5}>
+            <Box w='100%' display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={8}>
                 <VoxelDog />
                 {children}
-            </Container>
+            </Box>
         </Box>
     )
 }
