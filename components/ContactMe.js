@@ -28,7 +28,6 @@ import { BsGithub, BsPerson, BsInstagram, BsLinkedin, BsTwitter } from 'react-ic
 import { motion } from "framer-motion";
 import { useColorMode } from '@chakra-ui/color-mode'
 import { useTheme } from "@chakra-ui/react"
-import Link from 'next/link';
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },

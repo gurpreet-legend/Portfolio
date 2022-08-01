@@ -55,6 +55,7 @@ const WorkCard = ({ jobTitle, description, duration, company, logo }) => {
                         width="full"
                         objectFit={'cover'}
                         src={logo}
+                        alt="company logo"
                     />
                 </Box>
                 <Stack pt={10} align={'center'}>

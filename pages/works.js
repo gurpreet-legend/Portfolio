@@ -45,7 +45,7 @@ const works = () => {
 
                 {
                     worksData.map((data) => (
-                        <WorkCard jobTitle={data.jobTitle} description={data.description} duration={data.duration} company={data.company} logo={data.logo} />
+                        <WorkCard key={data.logo} jobTitle={data.jobTitle} description={data.description} duration={data.duration} company={data.company} logo={data.logo} />
 
                     ))
                 }
