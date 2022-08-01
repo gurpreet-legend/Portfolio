@@ -1,7 +1,7 @@
 import Logo from './logo.js'
 import NextLink from 'next/link'
 import {
-    Container, 
+    Container,
     Box,
     Link,
     Stack,
@@ -22,19 +22,19 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
     return (
-      <NextLink href={href} passHref>
-        <Link
-          p={2}
-          bg={active ? 'grassTeal' : undefined}
-          color={active ? '#202023' : inactiveColor}
-          _target={_target}
-          {...props}
-        >
-          {children}
-        </Link>
-      </NextLink>
+        <NextLink href={href} passHref>
+            <Link
+                p={2}
+                bg={active ? 'grassTeal' : undefined}
+                color={active ? '#202023' : inactiveColor}
+                _target={_target}
+                {...props}
+            >
+                {children}
+            </Link>
+        </NextLink>
     )
-  }
+}
 
 const Navbar = props => {
     const { path } = props
@@ -56,7 +56,7 @@ const Navbar = props => {
                 align="center"
                 justify="space-between"
             >
-       
+
                 <Flex align="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo />
@@ -71,6 +71,9 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
+                    <LinkItem href="/projects" path={path}>
+                        Projects
+                    </LinkItem>
                     <LinkItem href="/works" path={path}>
                         Works
                     </LinkItem>
@@ -116,14 +119,14 @@ const Navbar = props => {
                                     as={Link}
                                     href="https://github.com/gurpreet-legend"
                                 >
-                                My Github
+                                    My Github
                                 </MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
                 </Box>
             </Container>
-         </Box>
+        </Box>
     )
 }
 

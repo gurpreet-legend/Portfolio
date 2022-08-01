@@ -8,29 +8,29 @@ import GetToKnowMe from '../components/GetToKnowMe';
 
 const Texts = [
     {
-        field: 'Web Developer', 
+        field: 'Web Developer',
         color: '#1abc9c'
     },
     {
-        field: 'Blockchain Developer' ,
+        field: 'Blockchain Developer',
         color: '#3498db'
-    },  
+    },
     {
-        field: 'ML Developer' ,
+        field: 'Open Sourcer',
         color: '#f1c40f'
-    },  
+    },
     {
         field: 'Graphics Designer',
         color: '#e74c3c'
     },
     {
-        field: 'Anime Lover', 
+        field: 'Anime Lover',
         color: '#e67e22'
     },
     {
-        field: 'Digital Craftzman' ,
+        field: 'Digital Craftzman',
         color: '#9b59b6'
-    },  
+    },
 ]
 
 const variants = {
@@ -49,7 +49,7 @@ const Page = () => {
             variants={variants}
             transition={{ duration: 0.4, type: 'easeInOut' }}
         >
-            <Container maxW="container.xl" pb={4} px={[0,0]}>
+            <Container maxW="container.xl" pb={4} px={[0, 0]}>
                 {/* <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}  mb={6} align='center' py={5}>
                     Hello, I&apos;m a full-stack developer based in India
                 </Box> */}
@@ -58,36 +58,36 @@ const Page = () => {
                     display='flex'
                     flexDirection={['column-reverse', 'column-reverse', 'row', 'row']}
                     justifyContent="flex-start"
-                    alignItems={{md: 'center'}}
+                    alignItems={{ md: 'center' }}
                     width="100%"
                     mb={[10, 10, 0, 0]}
                 >
-                    <Box display={{md: 'flex'}}  flexGrow={2}>
+                    <Box display={{ md: 'flex' }} flexGrow={2}>
                         <Box >
                             <Heading as="h1" size="4xl" mb={3} >Hello</Heading>
                             <Heading as="h2" size="xl" mb={3}>
-                                My name is Gurpreet 
+                                My name is Gurpreet
                             </Heading>
-                            
+
                             <Heading as="h2" size="lg">I am a student at IIITM Gwalior</Heading>
                             <Heading as="h2" size="lg" display="inline"> and{' '}</Heading>
-                            
+
                             <TextLoop>
                                 {Texts.map((text, index) => (
                                     <Heading as="h2" size="lg" color={text.color} key={index}>
-                                    {text.field}
+                                        {text.field}
                                     </Heading>)
                                 )}
                             </TextLoop>{" "}
-                            
+
                             {/* CV download button  */}
                             <Button display='block' mt={7} colorScheme="teal">
-                            <a href="/resume.pdf" target="_blank" rel="noreferrer" download> My Resume <DownloadIcon/></a>
+                                <a href="/resume.pdf" target="_blank" rel="noreferrer" download> My Resume <DownloadIcon /></a>
                             </Button>
                         </Box>
-                            
-                        </Box>
-                    
+
+                    </Box>
+
                     {/* Profile image */}
                     <Box
                         flexShrink={0}
@@ -96,19 +96,19 @@ const Page = () => {
                         mb={{ md: 0, base: 6 }}
                         textAlign="center"
                         display="flex"
-                        justifyContent={["center", 'center', "flex-end", "flex-end" ]}
-                        whileHover={{boxShadow: '0px 0px 5px #fff'}}
+                        justifyContent={["center", 'center', "flex-end", "flex-end"]}
+                        whileHover={{ boxShadow: '0px 0px 5px #fff' }}
                     >
                         <Image
                             borderColor="whiteAlpha.800"
                             borderWidth={2}
                             borderStyle="solid"
-                            maxWidth={['200px','250px','300px']}
+                            maxWidth={['200px', '250px', '300px']}
                             display="inline-block"
                             borderRadius="full"
                             src="/images/me.jpeg"
                             alt="Profile image"
-                            _hover={useColorModeValue({boxShadow: '0 0 10px #000'},{boxShadow: '0 0 10px #fff'})}
+                            _hover={useColorModeValue({ boxShadow: '0 0 10px #000' }, { boxShadow: '0 0 10px #fff' })}
                         />
                     </Box>
                 </Box>
@@ -117,7 +117,7 @@ const Page = () => {
                 <Technologies />
 
                 {/* Get to know me section */}
-                <GetToKnowMe/>
+                <GetToKnowMe />
 
 
 

@@ -24,10 +24,11 @@ import {
     MdFacebook,
     MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsPerson, BsInstagram, BsLinkedin, BsTwitter  } from 'react-icons/bs';
+import { BsGithub, BsPerson, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { motion } from "framer-motion";
 import { useColorMode } from '@chakra-ui/color-mode'
 import { useTheme } from "@chakra-ui/react"
+import Link from 'next/link';
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },
@@ -103,46 +104,57 @@ function ContactMe() {
                                             spacing={5}
                                             px={5}
                                             alignItems="flex-start">
-                                            <IconButton
-                                                aria-label="linkedin"
-                                                variant="ghost"
-                                                size="lg"
-                                                isRound={true}
-                                                _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
-                                                icon={<BsLinkedin size="28px" />}
-                                            />
-                                            <IconButton
-                                                aria-label="github"
-                                                variant="ghost"
-                                                size="lg"
-                                                isRound={true}
-                                                _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
-                                                icon={<BsGithub size="28px" />}
-                                            />
-                                            <IconButton
-                                                aria-label="twitter"
-                                                variant="ghost"
-                                                size="lg"
-                                                isRound={true}
-                                                _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
-                                                icon={<BsTwitter size="28px" />}
-                                            />
-                                            <IconButton
-                                                aria-label="facebook"
-                                                variant="ghost"
-                                                size="lg"
-                                                isRound={true}
-                                                _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
-                                                icon={<MdFacebook size="28px" />}
-                                            />
-                                            <IconButton
-                                                aria-label="Instagram"
-                                                variant="ghost"
-                                                size="lg"
-                                                isRound={true}
-                                                _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
-                                                icon={<BsInstagram size="28px" />}
-                                            />
+                                            <a target="_blank" href="https://www.linkedin.com/in/gurpreetsingh2701/" rel="noopener noreferrer">
+                                                <IconButton
+                                                    aria-label="linkedin"
+                                                    variant="ghost"
+                                                    size="lg"
+                                                    isRound={true}
+                                                    _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
+                                                    icon={<BsLinkedin size="28px" />}
+                                                />
+                                            </a>
+                                            <a target="_blank" href="https://github.com/gurpreet-legend" rel="noopener noreferrer">
+
+                                                <IconButton
+                                                    aria-label="github"
+                                                    variant="ghost"
+                                                    size="lg"
+                                                    isRound={true}
+                                                    _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
+                                                    icon={<BsGithub size="28px" />}
+                                                />
+                                            </a>
+                                            <a target="_blank" href="https://twitter.com/Gurpreet_legend" rel="noopener noreferrer">
+                                                <IconButton
+                                                    aria-label="twitter"
+                                                    variant="ghost"
+                                                    size="lg"
+                                                    isRound={true}
+                                                    _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
+                                                    icon={<BsTwitter size="28px" />}
+                                                />
+                                            </a>
+                                            <a target="_blank" href="https://www.facebook.com/gurpreet.legend" rel="noopener noreferrer">
+                                                <IconButton
+                                                    aria-label="facebook"
+                                                    variant="ghost"
+                                                    size="lg"
+                                                    isRound={true}
+                                                    _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
+                                                    icon={<MdFacebook size="28px" />}
+                                                />
+                                            </a>
+                                            <a target="_blank" href="https://www.instagram.com/gurpreet_legend/" rel="noopener noreferrer">
+                                                <IconButton
+                                                    aria-label="Instagram"
+                                                    variant="ghost"
+                                                    size="lg"
+                                                    isRound={true}
+                                                    _hover={{ bg: colorMode == "dark" ? colors.orange[200] : colors.teal[500] }}
+                                                    icon={<BsInstagram size="28px" />}
+                                                />
+                                            </a>
                                         </HStack>
                                     </Box>
                                 </WrapItem>
@@ -166,7 +178,7 @@ function ContactMe() {
                                                     <InputGroup borderColor="#E0E1E7">
                                                         <InputLeftElement
                                                             pointerEvents="none"
-                                                            
+
                                                         >
                                                             <MdOutlineEmail color="gray.800" />
                                                         </InputLeftElement>

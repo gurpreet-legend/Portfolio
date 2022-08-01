@@ -3,7 +3,7 @@ import Navbar from '../Navbar'
 import { Box } from '@chakra-ui/react'
 import VoxelDog from '../avatar/VoxelDog'
 
-const Main = ({children, router}) => {
+const Main = ({ children, router }) => {
     return (
         <Box as="main" pb={8} >
             <Head>
@@ -11,10 +11,12 @@ const Main = ({children, router}) => {
                 <title>Gurpreet Singh - Homepage</title>
             </Head>
 
-            <Navbar path={router.asPath}/>
+            <Navbar path={router.asPath} />
 
             <Box w='100%' display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={8}>
-                <VoxelDog />
+                {router.asPath === '/' ?
+                    <VoxelDog /> : ''
+                }
                 {children}
             </Box>
         </Box>
