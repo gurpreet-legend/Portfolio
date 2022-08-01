@@ -39,53 +39,53 @@ const MyProjects = () => {
                         >
                             {
                                 <Flex
-                                    flexDirection={["column","column","column",index%2 == 0 ?"row":"row-reverse"]}
+                                    flexDirection={["column", "column", "column", index % 2 == 0 ? "row" : "row-reverse"]}
                                     justifyContent="center"
                                     alignItems="center"
                                 >
-                                        <Tilt
-                                                tiltMaxAngleX={5}
-                                                tiltMaxAngleY={5}
-                                            >
-                                                <Box mx={8} borderRadius="20px" overflow="hidden" w={{ lg: '45vw', sm: '100vw' }}>
-                                                    <Image
-                                                        src={project.imagePath}
-                                                        alt="project image"
-                                                    />
-                                                </Box>
-                                        </Tilt>
-                                        <Flex
-                                                flexDirection="column"
-                                                justifyContent="center"
-                                                alignItems="center"
-                                            >
-                                                <Heading as='h2' fontSize='2em' mb={0} mt={{ md: 8 }}>{project.name}</Heading>
-                                                <Text textAlign="center" my={6} fontSize="1em">{project.info}</Text>
-                                                <Flex mb={7}>
-                                                    {
-                                                        project.techStack.map((icon, i) => (
-                                                            <Box key={i} mx={2}>
-                                                                {React.createElement(icon.icon, { size: "3em", color: colorMode == 'light' && icon.config.color == '#ffffff' ? '#000000' : icon.config.color })}
-                                                            </Box>
-                                                        ))
-                                                    }
-                                                </Flex>
-                                                <Flex>
-                                                    {project.hostlink ?
-                                                        <Button mr={4}>
-                                                            <a href={project.hostlink} target="_blank" rel="noreferrer">
-                                                                Hostlink
-                                                            </a>
-                                                        </Button> : ''
-                                                    }
-                                                    <Button>
-                                                        <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                                                            Code
-                                                        </a>
-                                                    </Button>
-                                                </Flex>
+                                    <Tilt
+                                        tiltMaxAngleX={5}
+                                        tiltMaxAngleY={5}
+                                    >
+                                        <Box mx={8} borderRadius="20px" overflow="hidden" w={{ lg: '45vw', sm: '100vw' }}>
+                                            <Image
+                                                src={project.imagePath}
+                                                alt="project image"
+                                            />
+                                        </Box>
+                                    </Tilt>
+                                    <Flex
+                                        flexDirection="column"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                    >
+                                        <Heading as='h2' fontSize='2em' mb={0} mt={{ md: 8 }}>{project.name}</Heading>
+                                        <Text textAlign="center" my={6} fontSize="1em">{project.info}</Text>
+                                        <Flex mb={7}>
+                                            {
+                                                project.techStack.map((icon, i) => (
+                                                    <Box key={i} mx={2}>
+                                                        {React.createElement(icon.icon, { size: "50px", color: colorMode == 'light' && icon.config.color == '#ffffff' ? '#000000' : icon.config.color })}
+                                                    </Box>
+                                                ))
+                                            }
                                         </Flex>
-                                </Flex>  
+                                        <Flex>
+                                            {project.hostlink ?
+                                                <Button mr={4}>
+                                                    <a href={project.hostlink} target="_blank" rel="noreferrer">
+                                                        Hostlink
+                                                    </a>
+                                                </Button> : ''
+                                            }
+                                            <Button>
+                                                <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                                                    Code
+                                                </a>
+                                            </Button>
+                                        </Flex>
+                                    </Flex>
+                                </Flex>
                             }
                         </Box>
                     </Section>
